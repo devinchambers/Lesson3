@@ -1,9 +1,4 @@
-var note1;
-var note2;
-var note3;
-var note4;
-var note5;
-var note6;
+
 let s = 0;
 let d = 0;
 let f = 0;
@@ -384,7 +379,7 @@ rect(540,650, 50, 100)
   if (l == 0) {
  fill (R,B,G);
      stroke(R,B,G);
-rect(540,650, 50, 100)
+rect(540,650, 48, 100)
 
   
 }
@@ -481,12 +476,12 @@ song5.play();
     rect (0,0, 800, 550)    
 
     
-  textSize(100);
+  textSize(30);
  
   fill (0);
-  text("Naomi is gay!!!", 50, 400);
+  text(word, x, y);
 
-song7.play();
+song6.play();
  l = 10;
   a = a + 1;
   }
