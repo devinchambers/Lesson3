@@ -31,38 +31,37 @@ function preload() {
   song4 = loadSound ("note4.wav");
  song5 = loadSound ("note5.wav");
  song6 = loadSound ("note6.wav");
+   song7 = loadSound ("note7.wav");
 
 }
 
 function setup() {
-  createCanvas(1920, 1080);
+  createCanvas(800, 800);
   background(255);
  
-rect(700,900, 50, 100)
-rect(760,900, 50, 100)
-rect(820,900, 50, 100)
-rect(940,900, 50, 100)
-rect(1000,900, 50, 100)
-rect(1060,900, 50, 100)
+rect(200,650, 50, 100)
+rect(260,650, 50, 100)
+rect(320,650, 50, 100)
+rect(420,650, 50, 100)
+rect(480,650, 50, 100)
+rect(540,650, 50, 100)
    textSize(30);
-  text('s', 715, 875);
-  text('d', 775, 875);
-  text('f', 835, 875);
-  text('j', 960, 875);
-  text('k', 1015, 875);
-  text('l', 1075, 875);
+  text('s', 215, 615);
+  text('d', 275, 615);
+  text('f', 335, 615);
+  text('j', 440, 615);
+  text('k', 495, 615);
+  text('l', 555, 615);
 }
 
 
 function draw() {
   //words 
   //stroke (255);
-  x = int(random(250,1250));
-  y = int(random(150,750));
+  x = int(random(50,700));
+  y = int(random(50,550));
 
-   R = int(random(0,255));
-   G = int(random(0,255));
-   B = int(random(0,255));
+ 
   
   if (a == 1) 
   {
@@ -280,29 +279,36 @@ function draw() {
   
   
 if (s > 0) {
-   fill (1);
-     stroke(1);
-  rect(700,900, 50, 100);
+   fill (255);
+     stroke(0);
+rect(200,650, 50, 100)
   s = s - 1;
-  
+    R = int(random(0,255));
+   G = int(random(0,255));
+   B = int(random(0,255));
 }
   if (s == 0) {
-   fill (255);
-    stroke(1);
-  rect(700,900, 50, 100);
+  fill (R,B,G);
+     stroke(R,B,G);
+rect(200,650, 50, 100)
 }
   
   
   if (d > 0) {
-       stroke(1);
-   fill (1);
- rect(760,900, 50, 100);
-  d = d - 1;
+   fill (255);
+     stroke(0);
+rect(260,650, 50, 100)
+      d = d - 1;
   
+    R = int(random(0,255));
+   G = int(random(0,255));
+   B = int(random(0,255));s
+
 }
   if (d == 0) {
-   fill (255);
- rect(760,900, 50, 100);
+  fill (R,B,G);
+     stroke(R,B,G);
+rect(260,650, 50, 100)
 
   
 }
@@ -310,61 +316,75 @@ if (s > 0) {
   
   
   if (f > 0) {
-       stroke(1);
-   fill (1);
- rect(820,900, 50, 100);
+    fill (255);
+     stroke(0);
+rect(320,650, 50, 100)
+    R = int(random(0,255));
+   G = int(random(0,255));
+   B = int(random(0,255));
   f = f - 1;
   
 }
   if (f == 0) {
-   fill (255);
- rect(820,900, 50, 100);
+ fill (R,B,G);
+     stroke(R,B,G);
+rect(320,650, 50, 100)
   
 }
 
   
   
   if (j > 0) {
-       stroke(1);
-   fill (1);
-   rect(940,900, 50, 100);
+     fill (255);
+     stroke(0);
+rect(420,650, 50, 100)
+    R = int(random(0,255));
+   G = int(random(0,255));
+   B = int(random(0,255));
   j = j - 1;
   
 }
   if (j == 0) {
-    //stroke(255);
-   fill (255);
-  rect(940,900, 50, 100);
+   fill (R,B,G);
+     stroke(R,B,G);
+rect(420,650, 50, 100)
 
   
 }
 
   
   if (k > 0) {
-       stroke(1);
-   fill (1);
-  rect(1000,900, 50, 100);
+    fill (255);
+     stroke(0);
+rect(480,650, 50, 100)
+    R = int(random(0,255));
+   G = int(random(0,255));
+   B = int(random(0,255));
   k = k - 1;
   
 }
   if (k == 0) {
-       stroke(1);
-   fill (255);
-  rect(1000,900, 50, 100);
+   fill (R,B,G);
+     stroke(R,B,G);
+rect(480,650, 50, 100)
 
   
 }
   
    if (l > 0) {
-        stroke(1);
-   fill (1);
-  rect(1060,900, 50, 100);
+    fill (255);
+     stroke(0);
+rect(540,650, 50, 100)
+    R = int(random(0,255));
+   G = int(random(0,255));
+   B = int(random(0,255));
   l = l - 1;
   
 }
   if (l == 0) {
-   fill (255);
-  rect(1060,900, 50, 100);
+ fill (R,B,G);
+     stroke(R,B,G);
+rect(540,650, 50, 100)
 
   
 }
@@ -375,9 +395,9 @@ if (s > 0) {
  
 function keyPressed() {
 if (key === 's')  { 
-    fill (10, 18, 120);
-  stroke (10, 18, 120);
-    rect (0,0, 1920, 800)    
+    fill (255);
+  stroke (255);
+    rect (0,0, 800, 550)    
 
   textSize(30);
 
@@ -390,9 +410,10 @@ song.play();
    
   if (key === 'd')  { 
   textSize(30);
-    fill (200, 140,40);
-      stroke (200, 140,40);
-    rect (0,0, 1920, 800)
+     fill (255);
+  stroke (255);
+    rect (0,0, 800, 550)    
+
     
   fill (0);
 text(word, x, y);
@@ -403,9 +424,10 @@ song2.play();
   }
   
   if (key === 'f')  { 
-      fill (20, 240, 230);
-      stroke (20, 240, 230);
-    rect (0,0, 1920, 800)
+      fill (255);
+  stroke (255);
+    rect (0,0, 800, 550)    
+
     
   textSize(30);
  
@@ -419,9 +441,10 @@ song3.play();
   }
   
   if (key === 'j')  { 
-      fill (200, 180, 150);
-      stroke (200, 180, 150);
-    rect (0,0, 1920, 800)
+     fill (255);
+  stroke (255);
+    rect (0,0, 800, 550)   
+
     
     
   textSize(30);
@@ -436,10 +459,10 @@ song4.play();
   }
   
   if (key === 'k')  { 
-      fill (240, 120, 5);
-      stroke (240, 120, 5);
-    rect (0,0, 1920, 800)
-    
+    fill (255);
+  stroke (255);
+    rect (0,0, 800, 550)    
+
     
   textSize(30);
     fill (255);
@@ -453,16 +476,17 @@ song5.play();
   }
   
   if (key === 'l')  { 
-      stroke (200,80,50);
-      fill (200,80,50);
-    rect (0,0, 1920, 800)
+       fill (255);
+  stroke (255);
+    rect (0,0, 800, 550)    
+
     
-  textSize(30);
+  textSize(100);
  
   fill (0);
-  text(word, x, y);
+  text("Naomi is gay!!!", 50, 400);
 
-song6.play();
+song7.play();
  l = 10;
   a = a + 1;
   }
