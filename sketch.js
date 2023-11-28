@@ -15,6 +15,14 @@ let word = 'Bag'
 
 let x = 100;
 let y = 100;
+let R = 0;
+let G = 0; 
+let B = 0;
+
+
+let boxR = 0;
+let boxG = 0;
+let boxB = 0;
 
 function preload() {
   song = loadSound ("note1.wav");
@@ -52,6 +60,9 @@ function draw() {
   x = int(random(250,1250));
   y = int(random(150,750));
 
+   R = int(random(0,255));
+   G = int(random(0,255));
+   B = int(random(0,255));
   
   if (a == 1) 
   {
@@ -260,7 +271,7 @@ function draw() {
     word = 'longer';
   }
   
-  if(a == 38) {
+  if(a >= 38) {
     
     
     a = 0;
@@ -364,10 +375,10 @@ if (s > 0) {
  
 function keyPressed() {
 if (key === 's')  { 
-    fill (255);
-  stroke (255);
- rect (200,100, 1520, 700)
-    
+    fill (10, 18, 120);
+  stroke (10, 18, 120);
+    rect (0,0, 1920, 800)    
+
   textSize(30);
 
   fill (0);
@@ -379,9 +390,9 @@ song.play();
    
   if (key === 'd')  { 
   textSize(30);
-    fill (255);
-      stroke (255);
- rect (200,100, 1520, 700)
+    fill (200, 140,40);
+      stroke (200, 140,40);
+    rect (0,0, 1920, 800)
     
   fill (0);
 text(word, x, y);
@@ -392,9 +403,9 @@ song2.play();
   }
   
   if (key === 'f')  { 
-      fill (255);
-      stroke (255);
-   rect (200,100, 1520, 700)
+      fill (20, 240, 230);
+      stroke (20, 240, 230);
+    rect (0,0, 1920, 800)
     
   textSize(30);
  
@@ -408,9 +419,9 @@ song3.play();
   }
   
   if (key === 'j')  { 
-      fill (255);
-      stroke (255);
-    rect (200,100, 1520, 700)
+      fill (200, 180, 150);
+      stroke (200, 180, 150);
+    rect (0,0, 1920, 800)
     
     
   textSize(30);
@@ -425,9 +436,9 @@ song4.play();
   }
   
   if (key === 'k')  { 
-      fill (255);
-      stroke (255);
-  rect (200,100, 1520, 700)
+      fill (240, 120, 5);
+      stroke (240, 120, 5);
+    rect (0,0, 1920, 800)
     
     
   textSize(30);
@@ -442,9 +453,9 @@ song5.play();
   }
   
   if (key === 'l')  { 
-      stroke (255);
-      fill (255);
- rect (200,100, 1520, 700)
+      stroke (200,80,50);
+      fill (200,80,50);
+    rect (0,0, 1920, 800)
     
   textSize(30);
  
