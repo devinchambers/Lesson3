@@ -13,7 +13,8 @@ let l = 0;
 let a = 1;
 let word = 'Bag'
 
-
+let x = 100;
+let y = 100;
 
 function preload() {
   song = loadSound ("note1.wav");
@@ -26,28 +27,31 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(800, 600);
+  createCanvas(1920, 1080);
   background(255);
  
-rect(240,400, 50, 100)
-rect(300,400, 50, 100)
-rect(360,400, 50, 100)
-rect(420,400, 50, 100)
-rect(480,400, 50, 100)
-rect(540,400, 50, 100)
+rect(700,900, 50, 100)
+rect(760,900, 50, 100)
+rect(820,900, 50, 100)
+rect(940,900, 50, 100)
+rect(1000,900, 50, 100)
+rect(1060,900, 50, 100)
    textSize(30);
-  text('s', 255, 375);
-  text('d', 315, 375);
-  text('f', 375, 375);
-  text('j', 435, 375);
-  text('k', 495, 375);
-  text('l', 555, 375);
+  text('s', 715, 875);
+  text('d', 775, 875);
+  text('f', 835, 875);
+  text('j', 960, 875);
+  text('k', 1015, 875);
+  text('l', 1075, 875);
 }
 
-let x = 1; 
+
 function draw() {
   //words 
   //stroke (255);
+  x = int(random(250,1250));
+  y = int(random(150,750));
+
   
   if (a == 1) 
   {
@@ -267,27 +271,27 @@ function draw() {
 if (s > 0) {
    fill (1);
      stroke(1);
-  rect(240,400, 50, 100);
+  rect(700,900, 50, 100);
   s = s - 1;
   
 }
   if (s == 0) {
    fill (255);
     stroke(1);
-  rect(240,400, 50, 100);
+  rect(700,900, 50, 100);
 }
   
   
   if (d > 0) {
        stroke(1);
    fill (1);
-  rect(300,400, 50, 100);
+ rect(760,900, 50, 100);
   d = d - 1;
   
 }
   if (d == 0) {
    fill (255);
-  rect(300,400, 50, 100);
+ rect(760,900, 50, 100);
 
   
 }
@@ -297,14 +301,13 @@ if (s > 0) {
   if (f > 0) {
        stroke(1);
    fill (1);
-  rect(360,400, 50, 100);
+ rect(820,900, 50, 100);
   f = f - 1;
   
 }
   if (f == 0) {
    fill (255);
-  rect(360,400, 50, 100);
-
+ rect(820,900, 50, 100);
   
 }
 
@@ -313,13 +316,14 @@ if (s > 0) {
   if (j > 0) {
        stroke(1);
    fill (1);
-  rect(420,400, 50, 100);
+   rect(940,900, 50, 100);
   j = j - 1;
   
 }
   if (j == 0) {
+    //stroke(255);
    fill (255);
-  rect(420,400, 50, 100);
+  rect(940,900, 50, 100);
 
   
 }
@@ -328,14 +332,14 @@ if (s > 0) {
   if (k > 0) {
        stroke(1);
    fill (1);
-  rect(480,400, 50, 100);
+  rect(1000,900, 50, 100);
   k = k - 1;
   
 }
   if (k == 0) {
        stroke(1);
    fill (255);
-  rect(480,400, 50, 100);
+  rect(1000,900, 50, 100);
 
   
 }
@@ -343,13 +347,13 @@ if (s > 0) {
    if (l > 0) {
         stroke(1);
    fill (1);
-  rect(540,400, 50, 100);
+  rect(1060,900, 50, 100);
   l = l - 1;
   
 }
   if (l == 0) {
    fill (255);
-  rect(540,400, 50, 100);
+  rect(1060,900, 50, 100);
 
   
 }
@@ -362,12 +366,12 @@ function keyPressed() {
 if (key === 's')  { 
     fill (255);
   stroke (255);
-    rect (40,150, 800, 80)
+ rect (200,100, 1520, 700)
     
   textSize(30);
 
   fill (0);
-text(word, 50, 200);
+text(word, x, y);
 song.play();
  s = 10;
     a = a + 1;
@@ -377,12 +381,11 @@ song.play();
   textSize(30);
     fill (255);
       stroke (255);
-  rect (40,150, 800, 80)
+ rect (200,100, 1520, 700)
     
   fill (0);
-text(word, 150, 200);
+text(word, x, y);
 
-song.play();
 song2.play();
  d = 10;
     a = a + 1;
@@ -391,15 +394,14 @@ song2.play();
   if (key === 'f')  { 
       fill (255);
       stroke (255);
-   rect (40,150, 800, 80)
-    
+   rect (200,100, 1520, 700)
     
   textSize(30);
  
       fill (0);
-  text(word, 250, 200);
+  text(word, x, y);
 
-song.play();
+
 song3.play();
  f = 10;
     a = a + 1;
@@ -408,15 +410,15 @@ song3.play();
   if (key === 'j')  { 
       fill (255);
       stroke (255);
-    rect (40,150, 800, 80)
+    rect (200,100, 1520, 700)
     
     
   textSize(30);
 
       fill (0);
-  text(word, 350, 200);
+  text(word, x, y);
 
-song.play();
+
 song4.play();
  j = 10;
     a = a + 1;
@@ -425,16 +427,15 @@ song4.play();
   if (key === 'k')  { 
       fill (255);
       stroke (255);
-   rect (40,150, 800, 80)
+  rect (200,100, 1520, 700)
     
     
   textSize(30);
     fill (255);
   
       fill (0);
-    text(word, 450, 200);
- 
-song.play();
+    text(word, x, y);
+
 song5.play();
  k = 10;
     a = a + 1;
@@ -443,14 +444,13 @@ song5.play();
   if (key === 'l')  { 
       stroke (255);
       fill (255);
- rect (40,150, 800, 80)
-    
+ rect (200,100, 1520, 700)
     
   textSize(30);
  
   fill (0);
-  text(word, 550, 200);
-song.play();
+  text(word, x, y);
+
 song6.play();
  l = 10;
   a = a + 1;
